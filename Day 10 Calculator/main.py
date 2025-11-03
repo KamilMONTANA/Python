@@ -1,4 +1,3 @@
-
 print("----------Calculator----------\n")
 
 
@@ -12,7 +11,7 @@ while True:
     print("4. /")
     operator = int(input("Operator: "))
     secondNumber = int(input("Second number: \n"))
-    
+
     if operator == 1:
         result = firstNumber + secondNumber
         print(f"{firstNumber} + {secondNumber} = {result}")

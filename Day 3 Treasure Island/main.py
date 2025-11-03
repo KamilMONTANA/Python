@@ -1,21 +1,22 @@
-#  ______                        _                 ___  _           _ 
+#  ______                        _                 ___  _           _
 # |  ____|                      | |               |_  |(_)         | |
 # | |__  __  ___ __   ___  _ __ | |_ ___  _ __      | | _ _ __   __| |
 # |  __| \ \/ / '_ \ / _ \| '_ \| __/ _ \| '__|     | || | '_ \ / _` |
 # | |____ >  <| |_) | (_) | | | | || (_) | |        _| || | | | | (_| |
 # |______/_/\_\ .__/ \___/|_| |_|\__\___/|_|       |___/ |_|_| |_|\__,_|
 #             | |         ©2025 – fabularna wersja PL
-#             |_|               
+#             |_|
 
 import sys
 
 # ---------- ASCII ART ----------
-banner = r"""  (...)  """        # (skrót – wszystkie ASCII‑arty z poprzedniej wersji)
+banner = r"""  (...)  """  # (skrót – wszystkie ASCII‑arty z poprzedniej wersji)
 forest = r"""   (...)  """
-cave   = r"""   (...)  """
+cave = r"""   (...)  """
 dragon = r"""  (...)  """
-skull  = r"""  (...)  """
-chest  = r"""  (...)  """
+skull = r"""  (...)  """
+chest = r"""  (...)  """
+
 
 # ---------- FUNKCJE ----------
 def game_over():
@@ -23,14 +24,18 @@ def game_over():
     print("\nGAME OVER!\n")
     sys.exit()
 
+
 def treasure():
     print(chest)
     print("\nGratulacje! Odnalazłeś skarb i wygrywasz!\n")
     sys.exit()
 
+
 def main():
     print(banner)
-    print("Witaj na Treasure Island. Każda scena skrywa wskazówkę – obserwuj uważnie!\n")
+    print(
+        "Witaj na Treasure Island. Każda scena skrywa wskazówkę – obserwuj uważnie!\n"
+    )
 
     # --- Etap 1: Rozdroże w dżungli ---
     print("Między gęstymi palmami dostrzegasz dwie ścieżki.")
@@ -44,7 +49,9 @@ def main():
     print(forest)
     print("\nZmrok zapada błyskawicznie, ćmy obijają się o twoją twarz.")
     print("Na drzewie widnieje wypalony znak pochodni.")
-    choice2 = input("Rozpalasz pochodnię? (T – tak / I – idę w ciemność): ").strip().lower()
+    choice2 = (
+        input("Rozpalasz pochodnię? (T – tak / I – idę w ciemność): ").strip().lower()
+    )
     if choice2 != "t":
         game_over()
 
@@ -74,6 +81,7 @@ def main():
         treasure()
     else:
         game_over()
+
 
 if __name__ == "__main__":
     main()

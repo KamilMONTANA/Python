@@ -1,9 +1,11 @@
 from art import logo
+
 # Printing welcome message
 print(logo)
 print("Welcome to the secret auction program.")
 
 bids = {}
+
 
 # Finding the highest bidder
 def find_highest_bidder(bids):
@@ -15,6 +17,7 @@ def find_highest_bidder(bids):
             highest_bid = bid_amount
             highest_bidder = bidder
     return highest_bidder, highest_bid
+
 
 bidding_finisher = False
 
@@ -31,7 +34,6 @@ while not bidding_finisher:
         highest_bidder, highest_bid = find_highest_bidder(bids)
     else:
         print("\n" * 50)
-
 
 
 print(f"The highest bidder is {highest_bidder} with a bid of ${highest_bid}")

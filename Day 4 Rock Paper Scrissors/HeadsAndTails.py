@@ -6,4 +6,3 @@ if random_number == 0:
     print("Heads")
 else:
     print("Tails")
-

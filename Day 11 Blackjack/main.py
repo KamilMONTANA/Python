@@ -4,6 +4,7 @@ deck = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, "A", "K", "Q", "J"]
 player = []
 dealer = []
 
+
 def calculate_score(hand):
     """Calculate the total score of a hand, handling Aces as 1 or 11."""
     total = 0
@@ -21,6 +22,7 @@ def calculate_score(hand):
         aces -= 1
     return total
 
+
 def check_bust(player_score, dealer_score):
     """Check if either player or dealer has busted (score > 21)."""
     if player_score > 21:
@@ -29,11 +31,13 @@ def check_bust(player_score, dealer_score):
         return "Player wins!"
     return "Game continues..."
 
+
 def dealer_hit(dealer):
     """Have the dealer hit until their score is at least 17."""
     while calculate_score(dealer) < 17:
         dealer.append(random.choice(deck))
     return dealer
+
 
 def show_result(player_score, dealer_score):
     """Determine the result of the game based on scores."""
@@ -43,6 +47,7 @@ def show_result(player_score, dealer_score):
         return "Dealer wins!"
     return "It's a tie!"
 
+
 def playerDeck():
     """Deal 2 cards to player."""
     player.clear()
@@ -50,12 +55,14 @@ def playerDeck():
         player.append(random.choice(deck))
     return player
 
+
 def dealerDeck():
     """Deal 2 cards to dealer (one hidden)."""
     dealer.clear()
     for _ in range(2):
         dealer.append(random.choice(deck))
     return dealer
+
 
 def choice():
     """Player can choose to hit or stand."""
@@ -65,24 +72,27 @@ def choice():
     option = int(input("Option: "))
     return option
 
+
 def hit():
     """If player chooses to hit, deal 1 card."""
     player.append(random.choice(deck))
     return player
 
+
 def stand():
     """Player stands, end of player's turn"""
     return dealer
+
 
 while True:
     print("-------BLACKJACK-------")
     playerDeck()
     dealerDeck()
-    
+
     # Show player's hand and one dealer card
     print(f"Player: {player}")
     print(f"Dealer: [{dealer[0]}, ?]")
-    
+
     # Player's turn
     while True:
         option = choice()
@@ -98,7 +108,7 @@ while True:
         else:
             print("Invalid option")
             continue
-    
+
     # If player didn't bust, dealer's turn
     if calculate_score(player) <= 21:
         dealer_hit(dealer)
@@ -110,8 +120,8 @@ while True:
             player_score = calculate_score(player)
             result = show_result(player_score, dealer_score)
             print(result)
-    
+
     # Ask to play again
     play_again = input("Play again? (y/n): ")
-    if play_again.lower() != 'y':
+    if play_again.lower() != "y":
         break

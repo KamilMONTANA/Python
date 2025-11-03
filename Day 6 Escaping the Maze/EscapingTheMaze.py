@@ -11,6 +11,7 @@ COLS, ROWS = 25, 20
 WIDTH, HEIGHT = COLS * CELL_SIZE, ROWS * CELL_SIZE
 FPS = 30
 
+
 # --- Klasy i funkcje labiryntu ---
 class Cell:
     def __init__(self, x, y):
@@ -22,18 +23,30 @@ class Cell:
     def draw(self, surf):
         x, y = self.x * CELL_SIZE, self.y * CELL_SIZE
         if self.walls[0]:
-            pygame.draw.line(surf, pygame.Color('white'), (x, y), (x + CELL_SIZE, y))
+            pygame.draw.line(surf, pygame.Color("white"), (x, y), (x + CELL_SIZE, y))
         if self.walls[1]:
-            pygame.draw.line(surf, pygame.Color('white'), (x + CELL_SIZE, y), (x + CELL_SIZE, y + CELL_SIZE))
+            pygame.draw.line(
+                surf,
+                pygame.Color("white"),
+                (x + CELL_SIZE, y),
+                (x + CELL_SIZE, y + CELL_SIZE),
+            )
         if self.walls[2]:
-            pygame.draw.line(surf, pygame.Color('white'), (x + CELL_SIZE, y + CELL_SIZE), (x, y + CELL_SIZE))
+            pygame.draw.line(
+                surf,
+                pygame.Color("white"),
+                (x + CELL_SIZE, y + CELL_SIZE),
+                (x, y + CELL_SIZE),
+            )
         if self.walls[3]:
-            pygame.draw.line(surf, pygame.Color('white'), (x, y + CELL_SIZE), (x, y))
+            pygame.draw.line(surf, pygame.Color("white"), (x, y + CELL_SIZE), (x, y))
+
 
 def index(x, y):
     if 0 <= x < COLS and 0 <= y < ROWS:
         return x + y * COLS
     return None
+
 
 def remove_walls(a, b):
     dx = a.x - b.x
@@ -47,6 +60,7 @@ def remove_walls(a, b):
     elif dy == -1:
         a.walls[2] = b.walls[0] = False
 
+
 def generate_maze():
     grid = [Cell(x, y) for y in range(ROWS) for x in range(COLS)]
     stack = []
@@ -55,7 +69,7 @@ def generate_maze():
     while True:
         # 1. Znajdź nieodwiedzonych sąsiadów
         neighbors = []
-        for dir, (dx, dy) in enumerate([(0,-1),(1,0),(0,1),(-1,0)]):
+        for dir, (dx, dy) in enumerate([(0, -1), (1, 0), (0, 1), (-1, 0)]):
             ni = index(current.x + dx, current.y + dy)
             if ni is not None and not grid[ni].visited:
                 neighbors.append(grid[ni])
@@ -72,6 +86,7 @@ def generate_maze():
         else:
             break
     return grid
+
 
 # --- Inicjalizacja gry ---
 print("Initializing Pygame...")
@@ -120,18 +135,29 @@ while running:
         escape_time = time.time() - start_time
 
     # Rysowanie
-    screen.fill(pygame.Color('black'))
+    screen.fill(pygame.Color("black"))
     for c in grid:
         c.draw(screen)
 
     # Wyjście
     ex, ey = exit_pos
-    pygame.draw.rect(screen, pygame.Color('green'),
-                     (ex*CELL_SIZE+2, ey*CELL_SIZE+2, CELL_SIZE-4, CELL_SIZE-4))
+    pygame.draw.rect(
+        screen,
+        pygame.Color("green"),
+        (ex * CELL_SIZE + 2, ey * CELL_SIZE + 2, CELL_SIZE - 4, CELL_SIZE - 4),
+    )
 
     # Gracz
-    pygame.draw.rect(screen, pygame.Color('red'),
-                     (player_x*CELL_SIZE+2, player_y*CELL_SIZE+2, CELL_SIZE-4, CELL_SIZE-4))
+    pygame.draw.rect(
+        screen,
+        pygame.Color("red"),
+        (
+            player_x * CELL_SIZE + 2,
+            player_y * CELL_SIZE + 2,
+            CELL_SIZE - 4,
+            CELL_SIZE - 4,
+        ),
+    )
 
     # Ekran zwycięstwa
     if won:
@@ -140,11 +166,11 @@ while running:
         seconds = int(escape_time % 60)
         text_lines = [
             "GRATULACJE!",
-            f"Uciekłeś z labiryntu w czasie: {minutes}:{seconds:02d}"
+            f"Uciekłeś z labiryntu w czasie: {minutes}:{seconds:02d}",
         ]
         for i, line in enumerate(text_lines):
-            text = font.render(line, True, pygame.Color('yellow'))
-            rect = text.get_rect(center=(WIDTH//2, HEIGHT//2 - 30 + i*60))
+            text = font.render(line, True, pygame.Color("yellow"))
+            rect = text.get_rect(center=(WIDTH // 2, HEIGHT // 2 - 30 + i * 60))
             screen.blit(text, rect)
 
     pygame.display.flip()
