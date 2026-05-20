@@ -43,7 +43,7 @@ The project is divided into four main modules:
 3. Run the application:
 
    ```bash
-   python main.py
+   python lesson1.py
    ```
 
 ## 🚀 How to Use
