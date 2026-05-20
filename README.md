@@ -5,12 +5,12 @@ Welcome to my repository documenting my journey through the **100 Days of Code: 
 ---
 
 ## 📊 Challenge Progress
-![Progress Bar](https://geps.dev/progress/18?dangerColor=ff4b4b&warningColor=ffa500&successColor=4caf50)
-*Completed Days:* **18 / 100**
+![Progress Bar](https://geps.dev/progress/19?dangerColor=ff4b4b&warningColor=ffa500&successColor=4caf50)
+*Completed Days:* **19 / 100**
 
 ---
 
-## 🗺️ Project Roadmap (Days 1 - 18)
+## 🗺️ Project Roadmap (Days 1 - 19)
 
 Below is an overview of all the days completed so far, detailing the projects built, concepts learned, and direct links to the respective directories:
 
@@ -34,6 +34,7 @@ Below is an overview of all the days completed so far, detailing the projects bu
 | **16** | ⚙️ **OOP Coffee Machine** | Object-Oriented Programming (OOP), class blueprints, objects | [View Code](./16%20Day%20OOP%20Coffee%20Machine) |
 | **17** | ❓ **OOP Quiz Game** | Custom classes, the `__init__` constructor, class methods | [View Code](./17%20Day%20OOP%20Quiz%20game) |
 | **18** | 🎨 **Hirst Painting & GUI** | Turtle graphics, tuples (RGB), random walk, spirograph, external packages (`colorgram`) | [View Code](./18%20Day%20Turtle%20and%20GUI) |
+| **19** | 🐢 **Etch-a-Sketch & Turtle Race** | Event listeners, higher-order functions, object state, multiple instances | [View Code](./19%20Day%20Instances,%20State,%20Higher%20Order%20Functions,%20Event%20Listeners) |
 
 ---
 
