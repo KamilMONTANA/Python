@@ -5,26 +5,26 @@ Welcome to my repository documenting my journey through the **100 Days of Code: 
 ---
 
 ## 📊 Challenge Progress
-![Progress Bar](https://geps.dev/progress/17?dangerColor=ff4b4b&warningColor=ffa500&successColor=4caf50)
-*Completed Days:* **17 / 100**
+![Progress Bar](https://geps.dev/progress/18?dangerColor=ff4b4b&warningColor=ffa500&successColor=4caf50)
+*Completed Days:* **18 / 100**
 
 ---
 
-## 🗺️ Project Roadmap (Days 1 - 17)
+## 🗺️ Project Roadmap (Days 1 - 18)
 
 Below is an overview of all the days completed so far, detailing the projects built, concepts learned, and direct links to the respective directories:
 
 | Day | Project | 🔑 Key Concepts Covered | 📂 Code Folder |
 | :---: | :--- | :--- | :---: |
-| **02** | 🎸 **Band Name Generator** | Variables, standard input/output, f-strings | [View Code](./2%20Day%20Band-Name-Generator-main) |
-| **03** | 💸 **Tip Calculator** | Data types, type casting, arithmetic operators | [View Code](./3%20Day%20Tip-Calculator-main) |
-| **03** | 🏝️ **Treasure Island** | Conditional statements (`if`/`elif`/`else`), game logic | [View Code](./3%20Day%20Treasure%20Island) |
-| **04** | 🪨 **Rock Paper Scissors** | `random` module, Python lists, index offset manipulation | [View Code](./4%20Day%20Rock%20Paper%20Scrissors) |
-| **05** | 🔑 **Password Generator** | Loops (`for` loops), `range()` function, string shuffling | [View Code](./5%20Day%20Password%20Generator) |
-| **06** | 🌀 **Escaping the Maze** | Custom functions, `while` loops, Reeborg's world navigation | [View Code](./6%20Day%20Escaping%20the%20Maze) |
-| **07** | 🪓 **Hangman** | Game loops, list modification, ASCII art rendering | [View Code](./7%20Day%20Hangman) |
-| **08** | 🔐 **Caesar Cipher** | Function arguments, encryption/decryption mathematics | [View Code](./8%20Day%20Caesar%20Cipher) |
-| **09** | 🔨 **Secret Auction** | Dictionaries (`dict`), nesting databases, screen clearing | [View Code](./9%20Day%20Secret%20Auction) |
+| **02** | 🎸 **Band Name Generator** | Variables, standard input/output, f-strings | [View Code](./02%20Day%20Band-Name-Generator-main) |
+| **03** | 💸 **Tip Calculator** | Data types, type casting, arithmetic operators | [View Code](./03%20Day%20Tip-Calculator-main) |
+| **03** | 🏝️ **Treasure Island** | Conditional statements (`if`/`elif`/`else`), game logic | [View Code](./03%20Day%20Treasure%20Island) |
+| **04** | 🪨 **Rock Paper Scissors** | `random` module, Python lists, index offset manipulation | [View Code](./04%20Day%20Rock%20Paper%20Scrissors) |
+| **05** | 🔑 **Password Generator** | Loops (`for` loops), `range()` function, string shuffling | [View Code](./05%20Day%20Password%20Generator) |
+| **06** | 🌀 **Escaping the Maze** | Custom functions, `while` loops, Reeborg's world navigation | [View Code](./06%20Day%20Escaping%20the%20Maze) |
+| **07** | 🪓 **Hangman** | Game loops, list modification, ASCII art rendering | [View Code](./07%20Day%20Hangman) |
+| **08** | 🔐 **Caesar Cipher** | Function arguments, encryption/decryption mathematics | [View Code](./08%20Day%20Caesar%20Cipher) |
+| **09** | 🔨 **Secret Auction** | Dictionaries (`dict`), nesting databases, screen clearing | [View Code](./09%20Day%20Secret%20Auction) |
 | **10** | 🧮 **Calculator** | Functions with return values, recursion, mathematical design | [View Code](./10%20Day%20Calculator) |
 | **11** | 🃏 **Blackjack Capstone** | Complete Blackjack game logic, comprehensive integration | [View Code](./11%20Day%20Blackjack) |
 | **12** | 🎯 **Guess The Number** | Scope levels (Global vs. Local scope), Python constants | [View Code](./12%20Day%20GuessTheNumber) |
@@ -33,6 +33,7 @@ Below is an overview of all the days completed so far, detailing the projects bu
 | **15** | ☕ **Coffee Machine** | Local development environment setup, resource tracking | [View Code](./15%20Day%20Coffee%20Machine) |
 | **16** | ⚙️ **OOP Coffee Machine** | Object-Oriented Programming (OOP), class blueprints, objects | [View Code](./16%20Day%20OOP%20Coffee%20Machine) |
 | **17** | ❓ **OOP Quiz Game** | Custom classes, the `__init__` constructor, class methods | [View Code](./17%20Day%20OOP%20Quiz%20game) |
+| **18** | 🎨 **Hirst Painting & GUI** | Turtle graphics, tuples (RGB), random walk, spirograph, external packages (`colorgram`) | [View Code](./18%20Day%20Turtle%20and%20GUI) |
 
 ---
 
@@ -52,7 +53,7 @@ Below is an overview of all the days completed so far, detailing the projects bu
 3. **Navigate to the desired project folder and run it:**
    ```bash
    cd "17 Day OOP Quiz game"
-   python main.py
+   python lesson1.py
    ```
 
 ---
